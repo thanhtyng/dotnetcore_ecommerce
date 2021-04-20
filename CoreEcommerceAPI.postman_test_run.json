@@ -1,0 +1,610 @@
+{
+	"id": "9379fbdb-aa6c-47be-a057-fa190cb1ddf1",
+	"name": "CoreEcommerceAPI",
+	"timestamp": "2021-04-18T22:55:30.543Z",
+	"collection_id": "d13a24a3-b555-430d-90bc-e85c35414f1d",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 20,
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "29db2fb1-44cd-4513-874b-5e3cfad45dff",
+			"name": "Get Products",
+			"url": "https://localhost:5001/api/product",
+			"time": 14,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Should return a 200 Ok status": true,
+				"A return should be an array length of 5": true
+			},
+			"testPassFailCounts": {
+				"Should return a 200 Ok status": {
+					"pass": 1,
+					"fail": 0
+				},
+				"A return should be an array length of 5": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				14
+			],
+			"allTests": [
+				{
+					"Should return a 200 Ok status": true,
+					"A return should be an array length of 5": true
+				}
+			]
+		},
+		{
+			"id": "76c7218d-ec22-4b5f-a950-1ca91e06c8ae",
+			"name": "Get product  by Id failed",
+			"url": "http://localhost:5000/api/product/7",
+			"time": 27,
+			"responseCode": {
+				"code": 204,
+				"name": "No Content"
+			},
+			"tests": {
+				"Should return a 204 No Content status": true
+			},
+			"testPassFailCounts": {
+				"Should return a 204 No Content status": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				27
+			],
+			"allTests": [
+				{
+					"Should return a 204 No Content status": true
+				}
+			]
+		},
+		{
+			"id": "1381122b-258d-4e1a-9787-910c34ea4f33",
+			"name": "Get product by Id passed",
+			"url": "http://localhost:5000/api/product/1",
+			"time": 10,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Should return a 200 Ok status": true,
+				"Should return a product object": true
+			},
+			"testPassFailCounts": {
+				"Should return a 200 Ok status": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Should return a product object": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				10
+			],
+			"allTests": [
+				{
+					"Should return a 200 Ok status": true,
+					"Should return a product object": true
+				}
+			]
+		},
+		{
+			"id": "991529b1-1478-439e-91aa-c82e2da96540",
+			"name": "Get cart by user passed",
+			"url": "https://localhost:5001/api/cart",
+			"time": 103,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				103
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "c250d14c-a5f6-43cb-bd7d-0c6953e96383",
+			"name": "Get cart by user failed",
+			"url": "https://localhost:5001/api/cart",
+			"time": 11,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {
+				"If any row is missing will return a 400 unautorized request status": true
+			},
+			"testPassFailCounts": {
+				"If any row is missing will return a 400 unautorized request status": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				11
+			],
+			"allTests": [
+				{
+					"If any row is missing will return a 400 unautorized request status": true
+				}
+			]
+		},
+		{
+			"id": "abd8d5a8-2cf4-4e82-9c12-f06bfd13187b",
+			"name": "Register an user account passed",
+			"url": "http://localhost:5000/api/account/register",
+			"time": 20,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Should return a 200 Ok status": true
+			},
+			"testPassFailCounts": {
+				"Should return a 200 Ok status": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				20
+			],
+			"allTests": [
+				{
+					"Should return a 200 Ok status": true
+				}
+			]
+		},
+		{
+			"id": "b58a8696-bcba-4fde-9821-f8a785ee7dfa",
+			"name": "Register an user account failed",
+			"url": "http://localhost:5000/api/account/register",
+			"time": 5,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"If any row is missing will return a 400 bad request status": true
+			},
+			"testPassFailCounts": {
+				"If any row is missing will return a 400 bad request status": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				5
+			],
+			"allTests": [
+				{
+					"If any row is missing will return a 400 bad request status": true
+				}
+			]
+		},
+		{
+			"id": "a95ddb9a-6335-417a-86b0-8602bd8693f7",
+			"name": "Generate order for logged in user passed",
+			"url": "http://localhost:5000/api/order/registereduser",
+			"time": 64,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Should return a 200 Ok status": true
+			},
+			"testPassFailCounts": {
+				"Should return a 200 Ok status": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				64
+			],
+			"allTests": [
+				{
+					"Should return a 200 Ok status": true
+				}
+			]
+		},
+		{
+			"id": "de3927a3-01e5-4594-85a3-abf4cc9671d4",
+			"name": "Generate order for logged in user failed",
+			"url": "http://localhost:5000/api/order/registereduser",
+			"time": 7,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"If any row is missing will return a 400 bad request status": true
+			},
+			"testPassFailCounts": {
+				"If any row is missing will return a 400 bad request status": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				7
+			],
+			"allTests": [
+				{
+					"If any row is missing will return a 400 bad request status": true
+				}
+			]
+		},
+		{
+			"id": "b544dbb1-d3f5-49bf-91fe-3dbb54c18fee",
+			"name": "Generate order for guest user passed",
+			"url": "http://localhost:5000/api/order/guest",
+			"time": 84,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Should return a 200 Ok status": true
+			},
+			"testPassFailCounts": {
+				"Should return a 200 Ok status": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				84
+			],
+			"allTests": [
+				{
+					"Should return a 200 Ok status": true
+				}
+			]
+		},
+		{
+			"id": "b1433616-ab4c-4b83-98e3-9b429ce16a5e",
+			"name": "Generate order for guest user failed",
+			"url": "http://localhost:5000/api/order/guest",
+			"time": 5,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"If any row is missing will return a 400 bad request status": true
+			},
+			"testPassFailCounts": {
+				"If any row is missing will return a 400 bad request status": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				5
+			],
+			"allTests": [
+				{
+					"If any row is missing will return a 400 bad request status": true
+				}
+			]
+		},
+		{
+			"id": "67b34982-e586-43cb-bc9f-11790c793a8b",
+			"name": "Get purchased orders for logged in user passed",
+			"url": "http://localhost:5000/api/order/purchased-history",
+			"time": 133,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Should return a 200 Ok status": true
+			},
+			"testPassFailCounts": {
+				"Should return a 200 Ok status": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				133
+			],
+			"allTests": [
+				{
+					"Should return a 200 Ok status": true
+				}
+			]
+		},
+		{
+			"id": "a58469bc-fd7c-4614-8bfc-ffed0bebb993",
+			"name": "Get purchased orders for logged in user failed",
+			"url": "http://localhost:5000/api/order/purchased-history",
+			"time": 5,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {
+				"If a token is missing will return a 401 unauthorized status": true
+			},
+			"testPassFailCounts": {
+				"If a token is missing will return a 401 unauthorized status": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				5
+			],
+			"allTests": [
+				{
+					"If a token is missing will return a 401 unauthorized status": true
+				}
+			]
+		},
+		{
+			"id": "4a217d00-35d1-4467-9677-a30cf2335e5d",
+			"name": "Generate cart passed",
+			"url": "https://localhost:5001/api/cart/create",
+			"time": 32,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Should return a 200 Ok status": true
+			},
+			"testPassFailCounts": {
+				"Should return a 200 Ok status": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				32
+			],
+			"allTests": [
+				{
+					"Should return a 200 Ok status": true
+				}
+			]
+		},
+		{
+			"id": "f4ea45ef-6185-46a3-abf9-6dddad117ec3",
+			"name": "Generate cart failed",
+			"url": "https://localhost:5001/api/cart/create",
+			"time": 4,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"If any row is missing will return a 400 bad request status": true
+			},
+			"testPassFailCounts": {
+				"If any row is missing will return a 400 bad request status": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				4
+			],
+			"allTests": [
+				{
+					"If any row is missing will return a 400 bad request status": true
+				}
+			]
+		},
+		{
+			"id": "50dc124f-86ed-4225-aeb6-a61bddf429e8",
+			"name": "Login passed",
+			"url": "http://localhost:5000/api/account/login",
+			"time": 7,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Should return a 200 Ok status": true
+			},
+			"testPassFailCounts": {
+				"Should return a 200 Ok status": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				7
+			],
+			"allTests": [
+				{
+					"Should return a 200 Ok status": true
+				}
+			]
+		},
+		{
+			"id": "3da903db-75ad-4ed8-bd41-5f0ba0c4188a",
+			"name": "Login failed",
+			"url": "http://localhost:5000/api/account/login",
+			"time": 4,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"If any row is missing will return a 400 bad request status": true
+			},
+			"testPassFailCounts": {
+				"If any row is missing will return a 400 bad request status": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				4
+			],
+			"allTests": [
+				{
+					"If any row is missing will return a 400 bad request status": true
+				}
+			]
+		},
+		{
+			"id": "836153b7-f330-4eb7-9e7a-fe68270a1bc4",
+			"name": "Update password passed",
+			"url": "http://localhost:5000/api/account/changepassword",
+			"time": 10,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Should return a 200 Ok status": true
+			},
+			"testPassFailCounts": {
+				"Should return a 200 Ok status": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				10
+			],
+			"allTests": [
+				{
+					"Should return a 200 Ok status": true
+				}
+			]
+		},
+		{
+			"id": "e5de5437-2e2d-4fbe-b34e-70a8b5712726",
+			"name": "Update password failed",
+			"url": "http://localhost:5000/api/account/changepassword",
+			"time": 4,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"If any row is missing will return a 400 bad request status": true
+			},
+			"testPassFailCounts": {
+				"If any row is missing will return a 400 bad request status": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				4
+			],
+			"allTests": [
+				{
+					"If any row is missing will return a 400 bad request status": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 549,
+	"collection": {
+		"requests": [
+			{
+				"id": "29db2fb1-44cd-4513-874b-5e3cfad45dff",
+				"method": "GET"
+			},
+			{
+				"id": "76c7218d-ec22-4b5f-a950-1ca91e06c8ae",
+				"method": "GET"
+			},
+			{
+				"id": "1381122b-258d-4e1a-9787-910c34ea4f33",
+				"method": "GET"
+			},
+			{
+				"id": "991529b1-1478-439e-91aa-c82e2da96540",
+				"method": "GET"
+			},
+			{
+				"id": "c250d14c-a5f6-43cb-bd7d-0c6953e96383",
+				"method": "GET"
+			},
+			{
+				"id": "abd8d5a8-2cf4-4e82-9c12-f06bfd13187b",
+				"method": "POST"
+			},
+			{
+				"id": "b58a8696-bcba-4fde-9821-f8a785ee7dfa",
+				"method": "POST"
+			},
+			{
+				"id": "a95ddb9a-6335-417a-86b0-8602bd8693f7",
+				"method": "POST"
+			},
+			{
+				"id": "de3927a3-01e5-4594-85a3-abf4cc9671d4",
+				"method": "POST"
+			},
+			{
+				"id": "b544dbb1-d3f5-49bf-91fe-3dbb54c18fee",
+				"method": "POST"
+			},
+			{
+				"id": "b1433616-ab4c-4b83-98e3-9b429ce16a5e",
+				"method": "POST"
+			},
+			{
+				"id": "67b34982-e586-43cb-bc9f-11790c793a8b",
+				"method": "GET"
+			},
+			{
+				"id": "a58469bc-fd7c-4614-8bfc-ffed0bebb993",
+				"method": "GET"
+			},
+			{
+				"id": "4a217d00-35d1-4467-9677-a30cf2335e5d",
+				"method": "POST"
+			},
+			{
+				"id": "f4ea45ef-6185-46a3-abf9-6dddad117ec3",
+				"method": "POST"
+			},
+			{
+				"id": "50dc124f-86ed-4225-aeb6-a61bddf429e8",
+				"method": "POST"
+			},
+			{
+				"id": "3da903db-75ad-4ed8-bd41-5f0ba0c4188a",
+				"method": "POST"
+			},
+			{
+				"id": "836153b7-f330-4eb7-9e7a-fe68270a1bc4",
+				"method": "PUT"
+			},
+			{
+				"id": "e5de5437-2e2d-4fbe-b34e-70a8b5712726",
+				"method": "PUT"
+			}
+		]
+	}
+}
